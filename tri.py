@@ -45,15 +45,31 @@ for i in range(50):
 # TRI PAR INSERTION
 # ============================================================================
 # for i in range(1, len(tab)): 
-#     k = tab[i] 
+#     actual = tab[i] 
 #     j = i-1
-#     while j >= 0 and k < tab[j] : 
+
+#     while j >= 0 and actual < tab[j] : 
 #         tab[j + 1] = tab[j] 
 #         j -= 1
-#     tab[j + 1] = k
+#     tab[j + 1] = actual
 
 # print(tab)
 
+
+
+
+for i in range(1, len(tab)) :
+    actualNbr = tab[i]
+    
+    # décalage des éléments du tableau }
+    while i > 0 and tab[i-1] > actualNbr :
+        tab[i] = tab[i-1]
+        i -= 1
+        
+    # insère l'élément à sa place
+    tab[i] = actualNbr
+
+print(tab)
 
 # ============================================================================
 # TRI A BULLES
