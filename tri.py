@@ -11,36 +11,36 @@ for i in range(50):
 ## TRI PAR FUSION
 # ============================================================================
 
-def tri_fusion(list):
-    if len(list) > 1:
-        # sépare la liste en deux et arrondi a l'entier avec le math.floor 
-        # (ex : longueur de liste = 7)
-        # longueur de liste 1 = 3 et liste 2 = 4
-        part1 = list[0:math.floor(len(list)/2)]
-        part2 = list[math.floor(len(list)/2):len(list)]
+# def tri_fusion(list):
+#     if len(list) > 1:
+#         # sépare la liste en deux et arrondi a l'entier avec le math.floor 
+#         # (ex : longueur de liste = 7)
+#         # longueur de liste 1 = 3 et liste 2 = 4
+#         part1 = list[0:math.floor(len(list)/2)]
+#         part2 = list[math.floor(len(list)/2):len(list)]
 
-        part1Tri = tri_fusion(part1)
-        part2Tri = tri_fusion(part2)
-        newList = []
+#         part1Tri = tri_fusion(part1)
+#         part2Tri = tri_fusion(part2)
+#         newList = []
 
-        for i in range(len(list)):
-            if len(part1Tri) == 0:
-                newList.append(part2Tri[0])
-                part2Tri.remove(part2Tri[0])
-                # newList.append(part2Tri.pop())
-            elif len(part2Tri) == 0:
-                newList.append(part1Tri[0])
-                part1Tri.remove(part1Tri[0])
-            elif part1Tri[0] < part2Tri[0]:
-                newList.append(part1Tri[0])
-                part1Tri.remove(part1Tri[0])
-            else:
-                newList.append(part2Tri[0])
-                part2Tri.remove(part2Tri[0])
-        list = newList
-    return list
+#         for i in range(len(list)):
+#             if len(part1Tri) == 0:
+#                 newList.append(part2Tri[0])
+#                 part2Tri.remove(part2Tri[0])
+#                 # newList.append(part2Tri.pop())
+#             elif len(part2Tri) == 0:
+#                 newList.append(part1Tri[0])
+#                 part1Tri.remove(part1Tri[0])
+#             elif part1Tri[0] < part2Tri[0]:
+#                 newList.append(part1Tri[0])
+#                 part1Tri.remove(part1Tri[0])
+#             else:
+#                 newList.append(part2Tri[0])
+#                 part2Tri.remove(part2Tri[0])
+#         list = newList
+#     return list
 
-print(tri_fusion(tab))
+# print(tri_fusion(tab))
 
 
 # ============================================================================
@@ -185,3 +185,4 @@ print(tri_fusion(tab))
 # ============================================================================
 # TRI PAR SELECTION 
 # ============================================================================ 
+
